@@ -1,2 +1,2 @@
-# FriutFul
+# FruitFul
 passion project
