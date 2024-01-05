@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234456"
+  },
+  "applications": "*",
+  "entityTableName": "balance",
+  "fields": [
+    {
+      "fieldName": "creditCardType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "creditcardNum",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vaildThru",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cvs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "maxLimit",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "thrityPrecentLimit",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Balance",
+  "relationships": [
+    {
+      "otherEntityName": "transactions",
+      "otherEntityRelationshipName": "account",
+      "relationshipName": "transactions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "parents",
+      "relationshipName": "parents",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

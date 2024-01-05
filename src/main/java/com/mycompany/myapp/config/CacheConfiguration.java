@@ -48,6 +48,22 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Parents.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Parents.class.getName() + ".balances");
+            createCache(cm, com.mycompany.myapp.domain.Parents.class.getName() + ".children");
+            createCache(cm, com.mycompany.myapp.domain.Parents.class.getName() + ".achivements");
+            createCache(cm, com.mycompany.myapp.domain.Child.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Child.class.getName() + ".achivements");
+            createCache(cm, com.mycompany.myapp.domain.Child.class.getName() + ".parents");
+            createCache(cm, com.mycompany.myapp.domain.Balance.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Balance.class.getName() + ".transactions");
+            createCache(cm, com.mycompany.myapp.domain.Transactions.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Points.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Task.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Task.class.getName() + ".children");
+            createCache(cm, com.mycompany.myapp.domain.Task.class.getName() + ".parents");
+            createCache(cm, com.mycompany.myapp.domain.Achivement.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.CreditScore.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

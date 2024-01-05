@@ -1,0 +1,94 @@
+
+entity Parents  {
+parentsFristName String
+parentsLastName String
+}
+
+entity Child {
+userFristName String
+userLastName String
+}
+
+
+entity Balance  {
+	creditCardType String 
+	creditcardNum Integer
+    vaildThru Instant
+    cvs Integer
+	maxLimit Double 
+    thrityPrecentLimit Double  
+}
+
+entity Transactions {
+	amount Double 
+    date Instant 
+    
+}
+
+entity Points {
+	amount Integer 
+	used Integer 
+    
+}
+
+
+
+entity Task {
+	name String
+	description String
+    pointValue Integer 
+    completed Boolean
+}
+
+
+entity Achivement {
+	
+	name String 
+    pointValue Integer 
+}
+
+entity CreditScore {
+	month Instant 
+    ScoreNumber Integer
+}
+
+enum Language {
+ ENGLISH, SPANISH
+}
+
+relationship OneToOne {
+	Parents{creditScore} to CreditScore
+}
+relationship OneToOne {
+	Parents{points} to Points
+}
+relationship OneToOne {
+	Child{creditScore} to CreditScore
+}
+relationship OneToOne {
+	Child{points} to Points
+}
+
+relationship OneToOne {
+	Child{account} to Balance
+}
+
+relationship ManyToMany {
+    Parents to Child
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+
+	Parents to Balance{parents}
+    Balance to Transactions{account}
+	Task to Child{task}
+	
+   
+}
+
+relationship ManyToOne {
+	 Achivement to Child{achivement}
+      Achivement to Parents{achivement}
+     Parents to Task{parents}
+}

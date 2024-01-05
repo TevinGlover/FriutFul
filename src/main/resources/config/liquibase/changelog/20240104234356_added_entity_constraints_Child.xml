@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Child.
+    -->
+    <changeSet id="20240104234356-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="credit_score_id"
+                                 baseTableName="child"
+                                 constraintName="fk_child__credit_score_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="credit_score"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="points_id"
+                                 baseTableName="child"
+                                 constraintName="fk_child__points_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="points"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="account_id"
+                                 baseTableName="child"
+                                 constraintName="fk_child__account_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="balance"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="task_id"
+                                 baseTableName="child"
+                                 constraintName="fk_child__task_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="task"
+                                 />
+    </changeSet>
+</databaseChangeLog>

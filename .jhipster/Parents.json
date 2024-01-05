@@ -1,0 +1,60 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234256"
+  },
+  "applications": "*",
+  "entityTableName": "parents",
+  "fields": [
+    {
+      "fieldName": "parentsFristName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "parentsLastName",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Parents",
+  "relationships": [
+    {
+      "otherEntityName": "creditScore",
+      "relationshipName": "creditScore",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "points",
+      "relationshipName": "points",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "balance",
+      "otherEntityRelationshipName": "parents",
+      "relationshipName": "balance",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "task",
+      "otherEntityRelationshipName": "parents",
+      "relationshipName": "task",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "child",
+      "otherEntityRelationshipName": "parents",
+      "relationshipName": "child",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "achivement",
+      "relationshipName": "achivement",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

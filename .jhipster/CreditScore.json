@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234956"
+  },
+  "applications": "*",
+  "entityTableName": "credit_score",
+  "fields": [
+    {
+      "fieldName": "month",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "scoreNumber",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "CreditScore",
+  "relationships": [],
+  "searchEngine": "no"
+}

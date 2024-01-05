@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Parents.
+    -->
+    <changeSet id="20240104234256-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="credit_score_id"
+                                 baseTableName="parents"
+                                 constraintName="fk_parents__credit_score_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="credit_score"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="points_id"
+                                 baseTableName="parents"
+                                 constraintName="fk_parents__points_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="points"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="task_id"
+                                 baseTableName="parents"
+                                 constraintName="fk_parents__task_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="task"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="parents_id"
+                                 baseTableName="rel_parents__child"
+                                 constraintName="fk_rel_parents__child__parents_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="parents"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="child_id"
+                                 baseTableName="rel_parents__child"
+                                 constraintName="fk_rel_parents__child__child_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="child"
+                                 />
+    </changeSet>
+</databaseChangeLog>

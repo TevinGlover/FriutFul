@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234756"
+  },
+  "applications": "*",
+  "entityTableName": "task",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pointValue",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "completed",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Task",
+  "relationships": [
+    {
+      "otherEntityName": "child",
+      "otherEntityRelationshipName": "task",
+      "relationshipName": "child",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "parents",
+      "relationshipName": "parents",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

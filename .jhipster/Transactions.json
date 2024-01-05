@@ -1,0 +1,27 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234556"
+  },
+  "applications": "*",
+  "entityTableName": "transactions",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "Transactions",
+  "relationships": [
+    {
+      "otherEntityName": "balance",
+      "relationshipName": "account",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

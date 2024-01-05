@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234856"
+  },
+  "applications": "*",
+  "entityTableName": "achivement",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pointValue",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Achivement",
+  "relationships": [
+    {
+      "otherEntityName": "child",
+      "otherEntityRelationshipName": "achivement",
+      "relationshipName": "child",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "parents",
+      "otherEntityRelationshipName": "achivement",
+      "relationshipName": "parents",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

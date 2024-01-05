@@ -1,0 +1,20 @@
+{
+  "annotations": {
+    "changelogDate": "20240104234656"
+  },
+  "applications": "*",
+  "entityTableName": "points",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "used",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Points",
+  "relationships": [],
+  "searchEngine": "no"
+}
